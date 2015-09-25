@@ -1,0 +1,8 @@
+odds.converter v1.2 (Release date: 2015-09-25)
+==============
+
+Changes:
+
+* Added odds.dec2all and similar functions to allow the conversion into all odds formats 
+
+
