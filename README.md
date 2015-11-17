@@ -34,5 +34,17 @@ odds.fv(1.3,9,4,input = "dec",output = "prob")
 0.68052930 0.09829868 0.22117202
 ```
 
+Example: Calculate the implied Probability of a data.frame containing Home and Away odds
 
+```{r}
+df <- data.frame(Home = c(1.5,1.8,1.9),
+                 Away = c(2.9,2.2,2.05))
+odds.fv(df,input = "dec",output = "prob")
+        Home      Away
+[1,] 0.6590909 0.3409091
+[2,] 0.5500000 0.4500000
+[3,] 0.5189873 0.4810127
 ```
+
+
+
