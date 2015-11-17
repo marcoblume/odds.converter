@@ -49,7 +49,7 @@ odds.fv <- function (...,input="us",output="us") {
   }
   if(inherits(vig.prob.odds,"matrix")){
     vig <- rowSums(vig.prob.odds)
-    ifelse(vig < 1 , return(print("Vig is below 1 , can't calculate implied probablity")))
+    ifelse(vig < 1 , return(print("Vig is below 1 , can't calculate implied probablity")),NA)
   }else{
     vig <- sum(vig.prob.odds) 
     if(vig < 1 ){
