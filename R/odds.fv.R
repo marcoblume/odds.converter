@@ -1,6 +1,6 @@
 #' Calculate the fair ( vigorish free) odds for a vector of vigged odds. 
 #'
-#' @param ... Odds of the format defined in input
+#' @param ... Odds of the format defined in input, the odds can be submitted as a data.frame or as a vector
 #' @param input Default to US Odds. Valid selections are  "us" for US odds,
 #' "prob" for Probability ,"dec" for Decimal odds,"malay" for Malaysian odds,
 #' "hk" for Hong Kong odds, "indo" for Indonesian odds
@@ -8,7 +8,7 @@
 #' "prob" for Probability ,"dec" for Decimal odds,"malay" for Malaysian odds,
 #' "hk" for Hong Kong odds, "indo" for Indonesian odds 
 #'
-#' @return A matrix of the fair value of the the given vigged values in the format chosen in output
+#' @return A vector or a matrix of the fair values of the the given vigged values in the format chosen in output
 #'
 #' @examples
 #' odds.fv(-120,110)
@@ -16,6 +16,7 @@
 #' df <- data.frame(Home = c(1.5,1.8,1.9),
 #'                 Away = c(2.9,2.2,2.05))
 #' odds.fv(df,input = "dec",output = "prob")
+#' odds.fv(df$Home,df$Away,input="dec",output="prob")
 odds.fv <- function (...,input="us",output="us") {
   
   if ( !is.element(input,c("us","prob","dec","malay","hk","indo")) ||

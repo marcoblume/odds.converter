@@ -45,6 +45,10 @@ odds.fv(df,input = "dec",output = "prob")
 [2,] 0.5500000 0.4500000
 [3,] 0.5189873 0.4810127
 ```
+It is also possible to submit vectors as input to calculate the implied Probability
 
+```{r}
+odds.fv(df$Home,df$Away,input="dec",output="prob")
+```
 
 

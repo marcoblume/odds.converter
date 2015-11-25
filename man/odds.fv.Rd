@@ -7,7 +7,7 @@
 odds.fv(..., input = "us", output = "us")
 }
 \arguments{
-\item{...}{Odds of the format defined in input}
+\item{...}{Odds of the format defined in input, the odds can be submitted as a data.frame or as a vector}
 
 \item{input}{Default to US Odds. Valid selections are  "us" for US odds,
 "prob" for Probability ,"dec" for Decimal odds,"malay" for Malaysian odds,
@@ -18,7 +18,7 @@ odds.fv(..., input = "us", output = "us")
 "hk" for Hong Kong odds, "indo" for Indonesian odds}
 }
 \value{
-A matrix of the fair value of the the given vigged values in the format chosen in output
+A vector or a matrix of the fair values of the the given vigged values in the format chosen in output
 }
 \description{
 Calculate the fair ( vigorish free) odds for a vector of vigged odds.
@@ -29,5 +29,6 @@ odds.fv(2.05,3.12,2.90,input="dec",output="prob")
 df <- data.frame(Home = c(1.5,1.8,1.9),
                 Away = c(2.9,2.2,2.05))
 odds.fv(df,input = "dec",output = "prob")
+odds.fv(df$Home,df$Away,input="dec",output="prob")
 }
 
