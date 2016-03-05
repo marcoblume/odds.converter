@@ -12,7 +12,7 @@ Manchester United  Decimal Odds 1.3
 Arsenal            Decimal Odds 9.0
 Draw               Decimal Odds 4.0
 
-Example: Calculate the margin build into the betting odds
+Example: Calculate the margin build into these betting odds
 
 ```{r}
 sum(odds.dec2prob(c(1.3,9,4)))
