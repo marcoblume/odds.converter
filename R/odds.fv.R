@@ -1,4 +1,4 @@
-#' Calculate the fair ( vigorish free) odds for a vector of vigged odds. 
+#' Calculate the fair (vigorish free) odds for a vector of vigged odds. 
 #'
 #' @param ... Odds of the format defined in input, the odds can be submitted as a data.frame or as a vector
 #' @param input Default to US Odds. Valid selections are  "us" for US odds,
