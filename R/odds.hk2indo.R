@@ -4,6 +4,8 @@
 #'
 #' @return A vector of Indonesian odds
 #'
+#'@export
+#'
 #' @examples
 #' odds.hk2indo(c(1.93,0.05))
 odds.hk2indo <- function (x){

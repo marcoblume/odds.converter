@@ -4,6 +4,8 @@
 #'
 #' @return A vector of Malaysian odds
 #'
+#'@export
+#'
 #' @examples
 #' odds.us2malay(c(-200,150))
 odds.us2malay <- function (x) {

@@ -8,7 +8,7 @@
 #' "prob" for Probability ,"dec" for Decimal odds,"malay" for Malaysian odds,
 #' "hk" for Hong Kong odds, "indo" for Indonesian odds 
 #'
-#' @return
+#' @return Parlay odds in desired odds format
 #' @export
 #'
 #' @examples

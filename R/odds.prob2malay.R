@@ -4,6 +4,8 @@
 #'
 #' @return A vector of Malaysian odds
 #'
+#'@export
+#'
 #' @examples
 #' odds.prob2malay(c(0.5,0.6))
 odds.prob2malay <- function (x){

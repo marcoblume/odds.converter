@@ -4,6 +4,8 @@
 #'
 #' @return A vector of Probabilities
 #'
+#'@export
+#'
 #' @examples
 #' odds.dec2prob(c(1.93,2.05))
 odds.dec2prob <- function (x) {

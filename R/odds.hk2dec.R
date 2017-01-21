@@ -4,6 +4,8 @@
 #'
 #' @return A vector of Decimal odds
 #'
+#'@export
+#'
 #' @examples
 #' odds.hk2dec(c(1.93,0.05))
 odds.hk2dec <- function (x){

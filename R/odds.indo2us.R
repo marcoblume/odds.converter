@@ -4,6 +4,8 @@
 #'
 #' @return A vector of US odds
 #'
+#'@export
+#'
 #' @examples
 #' odds.indo2us(c(1.93,2.05))
 odds.indo2us <- function (x) {

@@ -4,6 +4,8 @@
 #'
 #' @return A vector of Probabilities
 #'
+#'@export
+#'
 #' @examples
 #' odds.us2prob(c(-200,150))
 odds.us2prob <- function (x) {

@@ -4,6 +4,8 @@
 #'
 #' @return A vector of Decimal odds
 #'
+#'@export
+#'
 #' @examples
 #' odds.prob2dec(c(0.5,0.6))
 odds.prob2dec <- function (x) {

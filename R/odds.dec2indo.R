@@ -3,7 +3,9 @@
 #' @param x A vector of Decimal odds
 #'
 #' @return A vector of Indonesian odds
-#'
+#' 
+#'@export
+#' 
 #' @examples
 #' odds.dec2indo(c(1.93,2.05))
 odds.dec2indo <- function (x) {

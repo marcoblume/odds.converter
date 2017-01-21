@@ -4,6 +4,8 @@
 #'
 #' @return A vector of Probabilities
 #'
+#'@export
+#'
 #' @examples
 #' odds.hk2us(c(1.93,0.05))
 odds.hk2prob<- function (x){

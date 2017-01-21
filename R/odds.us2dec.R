@@ -4,6 +4,8 @@
 #'
 #' @return A vector of Decimal odds
 #'
+#'@export
+#'
 #' @examples
 #' odds.us2dec(c(-200,150))
 odds.us2dec <- function (x) {

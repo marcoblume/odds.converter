@@ -4,6 +4,8 @@
 #'
 #' @return A vector of Indonesian odds
 #'
+#'@export
+#'
 #' @examples
 #' odds.us2indo(c(-200,150))
 odds.us2indo <- function (x) {

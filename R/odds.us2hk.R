@@ -4,6 +4,8 @@
 #'
 #' @return A vector of Hong Kong odds
 #'
+#'@export
+#'
 #' @examples
 #' odds.us2hk(c(-200,150))
 odds.us2hk <- function (x){

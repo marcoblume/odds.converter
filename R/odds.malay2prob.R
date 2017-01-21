@@ -4,6 +4,8 @@
 #'
 #' @return A vector of Probabilities
 #'
+#'@export
+#'
 #' @examples
 #' odds.malay2prob(c(1.93,2.05))
 odds.malay2prob <- function (x) {

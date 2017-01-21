@@ -4,6 +4,8 @@
 #'
 #' @return A vector of US odds
 #'
+#'@export
+#'
 #' @examples
 #' odds.malay2us(c(0.5,-0.6))
 odds.malay2us <- function (x) {
