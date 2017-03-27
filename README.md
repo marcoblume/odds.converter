@@ -1,3 +1,5 @@
+[![CRAN Status Badge](https://www.r-pkg.org/badges/version/odds.converter)](https://cran.r-project.org/package=odds.converter) [![CRAN Total Downloads](http://cranlogs.r-pkg.org/badges/grand-total/odds.converter)](https://cran.r-project.org/package=odds.converter) [![CRAN Monthly Downloads](http://cranlogs.r-pkg.org/badges/odds.converter)](https://cran.r-project.org/package=odds.converter)
+
 # odds.converter
 
 This package includes functions to transform US Odds, Decimal Odds , Malaysian Odds , Indonesian Odds , Honk Kong Odds and Probability into each other.
