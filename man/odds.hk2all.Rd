@@ -18,4 +18,3 @@ Convert Hong Kong Odds to all other formats
 \examples{
 odds.hk2all(c(1.93,0.05))
 }
-

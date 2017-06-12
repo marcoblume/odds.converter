@@ -18,4 +18,3 @@ Convert Probabilities to Hong Kong odds
 \examples{
 odds.prob2hk(c(0.5,0.6))
 }
-

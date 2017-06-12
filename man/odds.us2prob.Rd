@@ -18,4 +18,3 @@ Convert US odds to Probabilities
 \examples{
 odds.us2prob(c(-200,150))
 }
-

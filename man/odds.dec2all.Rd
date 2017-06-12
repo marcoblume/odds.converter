@@ -18,4 +18,3 @@ Convert Decimal Odds to all other formats
 \examples{
 odds.dec2all(c(1.93,2.05))
 }
-

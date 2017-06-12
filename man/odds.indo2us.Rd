@@ -18,4 +18,3 @@ Convert Indonesian odds to US odds
 \examples{
 odds.indo2us(c(1.93,2.05))
 }
-

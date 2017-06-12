@@ -18,4 +18,3 @@ Convert Decimal Odds to Probabilities
 \examples{
 odds.dec2prob(c(1.93,2.05))
 }
-

@@ -18,4 +18,3 @@ Convert Hong Kong Odds to Indonesian Odds
 \examples{
 odds.hk2indo(c(1.93,0.05))
 }
-

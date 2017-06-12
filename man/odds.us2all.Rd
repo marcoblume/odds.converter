@@ -18,4 +18,3 @@ Convert US Odds to all other formats
 \examples{
 odds.us2all(c(-200,105))
 }
-

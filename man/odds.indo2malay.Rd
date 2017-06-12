@@ -18,4 +18,3 @@ Convert Indonesian odds to Malaysian odds
 \examples{
 odds.indo2malay(c(1.93,2.05))
 }
-

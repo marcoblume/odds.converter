@@ -26,4 +26,3 @@ Transfer a vector to odds into correct parlay odds
 \examples{
 odds.parlay(c(-105,-110),output="dec")
 }
-

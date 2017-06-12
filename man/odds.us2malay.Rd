@@ -18,4 +18,3 @@ Convert US odds to Malaysian odds
 \examples{
 odds.us2malay(c(-200,150))
 }
-

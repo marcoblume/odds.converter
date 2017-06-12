@@ -18,4 +18,3 @@ Convert Probabilities to  to all other formats
 \examples{
 odds.prob2all(c(0.5,0.6))
 }
-

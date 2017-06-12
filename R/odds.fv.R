@@ -7,7 +7,7 @@
 #' @param output Default to US Odds. Valid selections are  "us" for US odds,
 #' "prob" for Probability ,"dec" for Decimal odds,"malay" for Malaysian odds,
 #' "hk" for Hong Kong odds, "indo" for Indonesian odds 
-#' @param Vectorized2wayOutput1stElement This speeds up the calculation as the output is a a vector that contains the FV of the first input. Usefull in dplyr chains
+#' @param Vectorized2wayOutput1stElement Returns a vector of the fair odds of the first element of the first input vector. This only makes sence if 2 vectors are present (Home,Away) as  FairAway = 1 - FairHome, so just returning Home is sufficient. This does not make sense if more than 2 vectors are present
 #'
 #'@export
 #'

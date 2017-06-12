@@ -18,4 +18,3 @@ Convert Malaysian odds to Decimal odds
 \examples{
 odds.malay2dec(c(0.5,-0.6))
 }
-

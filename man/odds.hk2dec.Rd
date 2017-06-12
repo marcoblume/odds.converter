@@ -18,4 +18,3 @@ Convert Hong Kong Odds to Decimal Odds
 \examples{
 odds.hk2dec(c(1.93,0.05))
 }
-

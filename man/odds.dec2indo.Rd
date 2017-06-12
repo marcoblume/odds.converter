@@ -18,4 +18,3 @@ Convert Decimal Odds to Indonesian odds
 \examples{
 odds.dec2indo(c(1.93,2.05))
 }
-

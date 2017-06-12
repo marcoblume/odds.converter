@@ -18,4 +18,3 @@ Convert Malaysian Odds to all other formats
 \examples{
 odds.malay2all(c(0.5,-0.6))
 }
-

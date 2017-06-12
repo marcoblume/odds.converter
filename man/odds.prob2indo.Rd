@@ -18,4 +18,3 @@ Convert Probabilities to Indonesian odds
 \examples{
 odds.prob2indo(c(0.5,0.6))
 }
-

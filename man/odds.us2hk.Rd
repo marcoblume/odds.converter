@@ -18,4 +18,3 @@ Convert US odds to Hong Kong odds
 \examples{
 odds.us2hk(c(-200,150))
 }
-

@@ -18,4 +18,3 @@ Convert Malaysian odds to Probabilities
 \examples{
 odds.malay2prob(c(1.93,2.05))
 }
-

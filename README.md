@@ -2,7 +2,7 @@
 
 # odds.converter
 
-This package includes functions to transform US Odds, Decimal Odds , Malaysian Odds , Indonesian Odds , Honk Kong Odds and Probability into each other.
+This package includes functions to transform US Odds, Decimal Odds, Malaysian Odds , Indonesian Odds , Honk Kong Odds and Probability into each other.
 
 Please contact me if there is a betting odds format that you want added to the package.
 
@@ -53,4 +53,33 @@ It is also possible to submit vectors as input to calculate the implied Probabil
 odds.fv(df$Home,df$Away,input="dec",output="prob")
 ```
 
+odds.fv() has an unusual option that prevents having to use rowwise() when working in longer chains and bigger datasets
 
+```{r}
+library(dplyr)
+
+df <- data.frame(Home = c(1.5,1.8,1.9),
+                 Away = c(2.9,2.2,2.05))
+```
+
+Without Vectorized2wayOutput1stElement = TRUE it is necessary to use rowwise(), which is very slow for larger datasets
+
+```{r}
+df %>%  
+  rowwise() %>% 
+  mutate(FairHome = odds.fv(Home,Away,input="dec",
+                            output = "prob",
+                            Vectorized2wayOutput1stElement = FALSE)[1]) %>% 
+  mutate(FairAway = 1 - FairHome)
+```
+
+This is equivalent but much faster
+
+```{r}
+df %>%  
+  mutate(FairHome = odds.fv(Home,Away,input="dec",
+                           output = "prob",
+                           Vectorized2wayOutput1stElement = TRUE),
+         FairAway = 1 - FairHome
+         )
+```

@@ -18,4 +18,3 @@ Convert Malaysian odds to Hong Kong odds
 \examples{
 odds.malay2hk(c(1.93,2.05))
 }
-

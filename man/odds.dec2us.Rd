@@ -18,4 +18,3 @@ Convert Decimal Odds to US Odds
 \examples{
 odds.dec2us(c(1.93,2.05))
 }
-
