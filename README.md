@@ -1,3 +1,5 @@
+<div style='position:relative;float:right;'><img src='r-odds-converter-sm.png'></div>
+
 [![CRAN Status Badge](https://www.r-pkg.org/badges/version/odds.converter)](https://cran.r-project.org/package=odds.converter) [![CRAN Total Downloads](http://cranlogs.r-pkg.org/badges/grand-total/odds.converter)](https://cran.r-project.org/package=odds.converter) [![CRAN Monthly Downloads](http://cranlogs.r-pkg.org/badges/odds.converter)](https://cran.r-project.org/package=odds.converter)
 
 # odds.converter
