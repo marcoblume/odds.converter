@@ -2,7 +2,7 @@
 #'
 #' @param x A vector of Decimal odds
 #'
-#' @return A dataframe 
+#' @return A data.frame 
 #'
 #'@export
 #' @examples
@@ -21,7 +21,7 @@ odds.dec2all <- function(x) {
 #'
 #' @param x A vector of US odds
 #'
-#' @return A dataframe 
+#' @return A data.frame  
 #' 
 #'@export
 #'
@@ -41,7 +41,7 @@ odds.us2all <- function(x) {
 #'
 #' @param x A vector of Probabilities
 #'
-#' @return A dataframe
+#' @return A data.frame 
 #'
 #'@export
 #'
@@ -62,7 +62,7 @@ odds.prob2all <- function(x) {
 #'
 #' @param x A vector of Hong Kong odds
 #'
-#' @return A dataframe
+#' @return A data.frame 
 #'
 #'@export
 #'
@@ -83,7 +83,7 @@ odds.hk2all <- function(x) {
 #'
 #' @param x A vector of Indonesian odds
 #'
-#' @return A vector of US odds
+#' @return A data.frame 
 #' 
 #'@export
 #'
@@ -103,7 +103,7 @@ odds.indo2all <- function(x) {
 #'
 #' @param x A vector of Malaysian odds
 #'
-#' @return A dataframe
+#' @return A data.frame 
 #' 
 #'@export
 #'
