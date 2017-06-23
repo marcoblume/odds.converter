@@ -20,6 +20,19 @@ Please contact me if there is a betting odds format that needs to be added to th
 
 Fractional Odds commonly used by bookmakers in the U.K. are not included as the transformation of these Odds is not very well defined and fractional odds are not used outside of the U.K and have been largely replaced by Decimal Odds.
 
+### Installation
+
+```{r}
+# Install from Cran
+install.packages("odds.converter")
+
+# Or the the development version from GitHub:
+# install.packages("devtools")
+devtools::install_github("marcoblume/odds.converter")
+```
+
+## Usage
+
 ### Transform specific odds into specific odds
 The package contains functions to transform one specific odds type into another specific odds type.
 These functions are called:
