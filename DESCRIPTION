@@ -3,7 +3,7 @@ Type: Package
 Title: Betting Odds Conversion
 Version: 1.45
 Date: 2017-1-25
-Author: Marco Blume
+Author: Marco Blume, Sascha Thomsen
 Maintainer: Marco Blume <marco.blume@pinnaclesports.com>
 Description: Conversion between the most common odds types for sports betting.
     Hong Kong odds, US odds, Decimal odds, Indonesian odds, Malaysian odds, and raw
