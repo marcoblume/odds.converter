@@ -7,7 +7,6 @@
 #' @param output Default to US Odds. Valid selections are  "us" for US odds,
 #' "prob" for Probability ,"dec" for Decimal odds,"malay" for Malaysian odds,
 #' "hk" for Hong Kong odds, "indo" for Indonesian odds 
-#' @param Vectorized2wayOutput1stElement Returns a vector of the fair odds of the first element of the first input vector. This only makes sence if 2 vectors are present (Home,Away) as  FairAway = 1 - FairHome, so just returning Home is sufficient. This does not make sense if more than 2 vectors are present
 #'
 #'@export
 #'
@@ -20,7 +19,6 @@
 #'                 Away = c(2.9,2.2,2.05))
 #' odds.fv(df,input = "dec",output = "prob")
 #' odds.fv(df$Home,df$Away,input="dec",output="prob")
-#' odds.fv(df$Home,df$Away,input="dec",output="prob",Vectorized2wayOutput1stElement = TRUE)
 odds.fv <- function (...,input="us",output="us",Vectorized2wayOutput1stElement = FALSE) {
   
   if ( !is.element(input,c("us","prob","dec","malay","hk","indo")) ||
@@ -66,52 +64,31 @@ odds.fv <- function (...,input="us",output="us",Vectorized2wayOutput1stElement =
   
   if (output=="dec"){
     fair.prob.dec <- odds.prob2dec(fair.prob.odds)
-    if(Vectorized2wayOutput1stElement){
-      return(fair.prob.dec[,1])
-    } else {
-      return(fair.prob.dec)
-    }
+    return(fair.prob.dec)
   }
+  
   if (output=="indo"){
     fair.prob.indo <- odds.prob2indo(fair.prob.odds)
-    if(Vectorized2wayOutput1stElement){
-      return(fair.prob.indo[,1])
-    } else {
-      return(fair.prob.indo)
-    }
+    return(fair.prob.indo)
   }
   
   if (output=="hk"){
     fair.prob.hk <- odds.prob2hk(fair.prob.odds)
-    if(Vectorized2wayOutput1stElement){
-      return(fair.prob.hk[,1])
-    } else {
-      return(fair.prob.hk)
-    }
+    return(fair.prob.hk)
   }
   
   if (output=="prob"){
-    if(Vectorized2wayOutput1stElement){
-      return(fair.prob.odds[,1])
-    } else {
-      return(fair.prob.odds)
-    }
+    return(fair.prob.odds)
   }
+  
   if (output=="us"){
     fair.prob.us <- odds.prob2us(fair.prob.odds) 
-    if(Vectorized2wayOutput1stElement){
-      return(fair.prob.us[,1])
-    } else {
-      return(fair.prob.us)
-    }
+    return(fair.prob.us)
   }
+  
   if (output=="malay"){
     fair.prob.malay <- odds.prob2malay(fair.prob.odds)
-    if(Vectorized2wayOutput1stElement){
-      return(fair.prob.malay[,1])
-    } else {
-      return(fair.prob.malay)
-    }
+   return(fair.prob.malay)
   }
   
 }
