@@ -130,8 +130,8 @@ df <- data.frame(Home = c(1.5,1.8,1.9),
 df %>%  
   mutate(FairHome = odds.fv(Home,Away,
                             input =   "dec",
-                            output = "prob") %>% 
-  mutate(FairAway = 1 - FairHome)
+                            output = "prob")[1]) %>% 
+           mutate(FairAway = 1 - FairHome)
 ```
 
 ### Calculate Parlays
