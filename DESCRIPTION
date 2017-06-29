@@ -8,5 +8,5 @@ Maintainer: Marco Blume <marco.blume@pinnaclesports.com>
 Description: Conversion between the most common odds types for sports betting.
     Hong Kong odds, US odds, Decimal odds, Indonesian odds, Malaysian odds, and raw
     Probability are covered in this package.
-License: GPL-2
+License: GPL-3
 RoxygenNote: 6.0.1

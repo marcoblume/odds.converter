@@ -18,7 +18,7 @@ These betting odds formats are covered in odds.converter at the moment
 
 Please contact me if there is a betting odds format that needs to be added to this package.
 
-Fractional Odds commonly used by bookmakers in the U.K. are not included as the transformation of these Odds is not very well defined and fractional odds are not used outside of the U.K and have been largely replaced by Decimal Odds.
+Fractional Odds commonly used by bookmakers in the U.K. are not included as the transformation of these Odds is not very well defined and Fractional Odds are not used outside of the U.K and have been largely replaced by Decimal Odds.
 
 ### Installation
 
