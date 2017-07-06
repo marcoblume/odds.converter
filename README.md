@@ -126,12 +126,25 @@ library(dplyr)
 
 df <- data.frame(Home = c(1.5,1.8,1.9),
                  Away = c(2.9,2.2,2.05))
+                 
 
-df %>%  
+df %>% 
+  rowwise() %>% 
   mutate(FairHome = odds.fv(Home,Away,
                             input =   "dec",
                             output = "prob")[1]) %>% 
-           mutate(FairAway = 1 - FairHome)
+  mutate(FairAway = 1 - FairHome)
+```
+
+As rowwise() slows down the calculation and the calculating of fair values for Home and Away odds odds.fv() has an option (Vectorized2wayOutput1stElement = TRUE) which can speed up the computation significantly for this specific use case.
+
+```{r}
+df %>% 
+  mutate(FairHome = odds.fv(Home,Away,
+                            input =   "dec",
+                            output = "prob",
+                            Vectorized2wayOutput1stElement = TRUE)) %>% 
+  mutate(FairAway = 1 - FairHome)
 ```
 
 ### Calculate Parlays
