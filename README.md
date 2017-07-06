@@ -136,7 +136,7 @@ df %>%
   mutate(FairAway = 1 - FairHome)
 ```
 
-As rowwise() slows down the calculation and the calculating of fair values for Home and Away odds odds.fv() has an option (Vectorized2wayOutput1stElement = TRUE) which can speed up the computation significantly for this specific use case.
+As rowwise() slows down the calculation and the calculation of fair values for Home and Away odds is a common use case odds.fv() has an option (Vectorized2wayOutput1stElement = TRUE), which can speed up the computation significantly for this specific use case.
 
 ```{r}
 df %>% 
