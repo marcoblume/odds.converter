@@ -8,6 +8,8 @@
 #'
 #' @examples
 #' odds.hk2malay(c(1.93,0.05))
-odds.hk2malay <- function (x){
-        ifelse (x <= 0,NA,odds.us2malay(odds.hk2us(x)))
+odds.hk2malay <- function (x) {
+  malay <- rep(NA_real_, length(x))
+  malay[x > 0] <- odds.us2malay(odds.hk2us(x[x > 0]))
+  malay
 }

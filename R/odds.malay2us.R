@@ -9,5 +9,7 @@
 #' @examples
 #' odds.malay2us(c(0.5,-0.6))
 odds.malay2us <- function (x) {
-        ifelse (x < -1 | x > 1,NA,-100/x)
+  us <- rep(NA_real_, length(x))
+  us[x >= -1 & x <= 1] <- -100 / x[x >= -1 & x <= 1]
+  us
 }

@@ -9,5 +9,7 @@
 #' @examples
 #' odds.indo2hk(c(1.93,2.05))
 odds.indo2hk <- function (x) {
-        ifelse (x > -1 & x < 1,NA,odds.us2hk(odds.indo2us(x)))
+  hk <- rep(NA_real_, length(x))
+  hk[x <= -1 | x >= 1] <- odds.us2hk(100 * x[x <= -1 | x >= 1])
+  hk
 }

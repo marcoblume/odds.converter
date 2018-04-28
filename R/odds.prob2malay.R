@@ -8,6 +8,8 @@
 #'
 #' @examples
 #' odds.prob2malay(c(0.5,0.6))
-odds.prob2malay <- function (x){
-        ifelse (x <= 0 | x >= 1,NA,odds.us2malay(odds.prob2us(x)))
+odds.prob2malay <- function (x) {
+  malay <- rep(NA_real_, length(x))
+  malay[x > 0 & x < 1] <- -100 / odds.prob2us(x[x > 0 & x < 1])
+  malay
 }

@@ -9,5 +9,8 @@
 #' @examples
 #' odds.prob2us(c(0.5,0.6))
 odds.prob2us <- function (x) {
-        ifelse (x <= 0 | x >= 1,NA,ifelse(x <=0.5,100 * (1/x - 1), -100/(1/x - 1)))
+  us <- rep(NA_real_, length(x))
+  us[x > 0 & x < 1] <- 100 * (1 / x[x > 0 & x < 1] - 1)
+  us[x > 0.5 & x < 1] <- -100 / (1 / x[x > 0.5 & x < 1] - 1)
+  us
 }

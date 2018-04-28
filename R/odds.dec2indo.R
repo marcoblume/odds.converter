@@ -3,11 +3,13 @@
 #' @param x A vector of Decimal odds
 #'
 #' @return A vector of Indonesian odds
-#' 
+#'
 #'@export
-#' 
+#'
 #' @examples
 #' odds.dec2indo(c(1.93,2.05))
 odds.dec2indo <- function (x) {
-        ifelse (x <= 1,NA,odds.us2indo(odds.dec2us(x)))
+  indo <- rep(NA_real_, length(x))
+  indo[x > 1] <- odds.dec2us(x[x > 1])) / 100
+  indo
 }

@@ -9,5 +9,7 @@
 #' @examples
 #' odds.dec2prob(c(1.93,2.05))
 odds.dec2prob <- function (x) {
-        ifelse(x <=1,NA,1/x)    
+  prob <- rep(NA_real_, length(x))
+  prob[x > 1] <- 1 / x[x > 1]
+  prob
 }

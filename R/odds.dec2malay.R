@@ -9,5 +9,7 @@
 #' @examples
 #' odds.dec2malay(c(1.93,2.05))
 odds.dec2malay <- function (x) {
-        ifelse (x <= 1,NA,odds.us2malay(odds.dec2us(x)))
+  malay <- rep(NA_real_, length(x))
+  malay[x > 1] <- odds.us2malay(odds.dec2us(x[x > 1]))
+  malay
 }
