@@ -9,5 +9,8 @@
 #' @examples
 #' odds.malay2hk(c(1.93,2.05))
 odds.malay2hk <- function (x) {
-        ifelse (x < -1 | x > 1,NA,odds.us2hk(odds.malay2us(x)))
+  hk <- rep(NA_real_, length(x))
+  hk[which(x > 0 & x <= 1)] <- x[which(x > 0 & x <= 1)]
+  hk[which(x >= -1 & x < 0)] <- -1 / x[which(x >= -1 & x < 0)]
+  hk
 }
