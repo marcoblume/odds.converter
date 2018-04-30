@@ -8,6 +8,8 @@
 #'
 #' @examples
 #' odds.hk2dec(c(1.93,0.05))
-odds.hk2dec <- function (x){
-        ifelse (x <= 0,NA,x+1)
+odds.hk2dec <- function (x) {
+  dec <- rep(NA_real_, length(x))
+  dec[which(x > 0)] <- x[which(x > 0)] + 1
+  dec
 }
