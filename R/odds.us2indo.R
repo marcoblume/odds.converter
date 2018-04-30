@@ -10,6 +10,6 @@
 #' odds.us2indo(c(-200,150))
 odds.us2indo <- function (x) {
   indo <- rep(NA_real_, length(x))
-  indo[x <= -100 | x >= 100] <- x[x <= -100 | x >= 100] / 100
+  indo[which(x <= -100 | x >= 100)] <- x[which(x <= -100 | x >= 100)] / 100
   indo
 }

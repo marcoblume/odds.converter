@@ -10,7 +10,7 @@
 #' odds.us2hk(c(-200,150))
 odds.us2hk <- function (x){
   hk <- rep(NA_real_, length(x))
-  hk[x <= -100] <- -100 / x[x <= -100]
-  hk[x >= 100] <- x[x >= 100] / 100
+  hk[which(x <= -100)] <- -100 / x[which(x <= -100)]
+  hk[which(x >= 100)] <- x[which(x >= 100)] / 100
   hk
 }

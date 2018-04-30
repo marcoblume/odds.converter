@@ -10,6 +10,6 @@
 #' odds.hk2us(c(1.93,0.05))
 odds.hk2prob<- function (x) {
   prob <- rep(NA_real_, length(x))
-  prob[x > 0] <- 1 / (x[x > 0] + 1)
+  prob[which(x > 0)] <- 1 / (x[which(x > 0)] + 1)
   prob
 }

@@ -10,7 +10,7 @@
 #' odds.us2prob(c(-200,150))
 odds.us2prob <- function (x) {
   prob <- rep(NA_real_, length(x))
-  prob[x <= -100] <- 1 + 100 / (x[x <= -100] - 100)
-  prob[x >= 100] <- 100 / (100 + x[x >= 100])
+  prob[which(x <= -100)] <- 1 / (1 - 100 / x[which(x <= -100)])
+  prob[which(x >= 100)] <- 1 / (1 + x[which(x >= 100)] / 100)
   prob
 }
