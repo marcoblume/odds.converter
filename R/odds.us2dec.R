@@ -9,6 +9,8 @@
 #' @examples
 #' odds.us2dec(c(-200,150))
 odds.us2dec <- function (x) {
-        ifelse (x > -100 & x < 100,NA,ifelse(x >0,x/100+1,-100/x+1))
-}              
-
+  dec <- rep(NA_real_, length(x))
+  dec[which(x <= -100)] <- -100 / x[which(x <= -100)] + 1
+  dec[which(x >= 100)] <- x[which(x >= 100)] / 100 + 1
+  dec
+}
