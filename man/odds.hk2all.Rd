@@ -10,7 +10,7 @@ odds.hk2all(x)
 \item{x}{A vector of Hong Kong odds}
 }
 \value{
-A dataframe
+A data.frame
 }
 \description{
 Convert Hong Kong Odds to all other formats

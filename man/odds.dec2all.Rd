@@ -10,7 +10,7 @@ odds.dec2all(x)
 \item{x}{A vector of Decimal odds}
 }
 \value{
-A dataframe
+A data.frame
 }
 \description{
 Convert Decimal Odds to all other formats

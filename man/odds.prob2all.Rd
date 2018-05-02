@@ -10,7 +10,7 @@ odds.prob2all(x)
 \item{x}{A vector of Probabilities}
 }
 \value{
-A dataframe
+A data.frame
 }
 \description{
 Convert Probabilities to  to all other formats
