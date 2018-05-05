@@ -9,9 +9,8 @@
 #' @examples
 #' odds.malay2dec(c(0.5,-0.6))
 odds.malay2dec <- function (x) {
-  dec <- rep(NA_real_, length(x))
-  dim(dec) <- dim(x)
-  names(dec) <- names(x)
+  dec <- x
+  dec[] <- NA_real_
   dec[which(x > 0 & x <= 1)] <- x[which(x > 0 & x <= 1)] + 1
   dec[which(x >= -1 & x < 0)] <- -1 / x[which(x >= -1 & x < 0)] + 1
   dec

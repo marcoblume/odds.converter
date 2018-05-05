@@ -9,9 +9,8 @@
 #' @examples
 #' odds.hk2dec(c(1.93,0.05))
 odds.hk2dec <- function (x) {
-  dec <- rep(NA_real_, length(x))
-  dim(dec) <- dim(x)
-  names(dec) <- names(x)
+  dec <- x
+  dec[] <- NA_real_
   dec[which(x > 0)] <- x[which(x > 0)] + 1
   dec
 }

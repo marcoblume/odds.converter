@@ -9,9 +9,8 @@
 #' @examples
 #' odds.hk2indo(c(1.93,0.05))
 odds.hk2indo <- function (x) {
-  indo <- rep(NA_real_, length(x))
-  dim(indo) <- dim(x)
-  names(indo) <- names(x)
+  indo <- x
+  indo[] <- NA_real_
   indo[which(x > 0)] <- odds.hk2us(x[which(x > 0)]) / 100
   indo
 }
