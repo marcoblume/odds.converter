@@ -10,6 +10,7 @@
 #' odds.malay2hk(c(1.93,2.05))
 odds.malay2hk <- function (x) {
   hk <- rep(NA_real_, length(x))
+  names(hk) <- names(x)
   hk[which(x > 0 & x <= 1)] <- x[which(x > 0 & x <= 1)]
   hk[which(x >= -1 & x < 0)] <- -1 / x[which(x >= -1 & x < 0)]
   hk
