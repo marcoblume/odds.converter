@@ -1,3 +1,10 @@
+odds.converter v1.47 (Release date: 2018-05-01)
+==============
+
+Changes:
+
+* Replaced ifelse to speed up the code execution. Thanks to bkmontgom for the pull request!
+
 odds.converter v1.46 (Release date: 2017-6-23)
 ==============
 

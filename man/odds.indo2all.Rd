@@ -10,7 +10,7 @@ odds.indo2all(x)
 \item{x}{A vector of Indonesian odds}
 }
 \value{
-A vector of US odds
+A data.frame
 }
 \description{
 Convert Indonesian to all other formats

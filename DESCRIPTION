@@ -1,8 +1,8 @@
 Package: odds.converter
 Type: Package
 Title: Betting Odds Conversion
-Version: 1.46
-Date: 2017-1-25
+Version: 1.47
+Date: 2018-05-01
 Author: Marco Blume, Sascha Thomsen
 Maintainer: Marco Blume <marco.blume@pinnaclesports.com>
 Description: Conversion between the most common odds types for sports betting.
@@ -10,3 +10,4 @@ Description: Conversion between the most common odds types for sports betting.
     Probability are covered in this package.
 License: GPL-3
 RoxygenNote: 6.0.1
+Suggests: testthat
