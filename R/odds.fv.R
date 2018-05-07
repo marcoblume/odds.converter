@@ -1,4 +1,4 @@
-#' Calculate the fair (vigorish free) odds for a vector of vigged odds. 
+#' Calculate the fair (vigorish free) odds for a vector of vigged odds.
 #'
 #' @param ... Odds of the format defined in input, the odds can be submitted as a data.frame or as a vector
 #' @param input Default to US Odds. Valid selections are  "us" for US odds,
@@ -6,7 +6,7 @@
 #' "hk" for Hong Kong odds, "indo" for Indonesian odds
 #' @param output Default to US Odds. Valid selections are  "us" for US odds,
 #' "prob" for Probability ,"dec" for Decimal odds,"malay" for Malaysian odds,
-#' "hk" for Hong Kong odds, "indo" for Indonesian odds 
+#' "hk" for Hong Kong odds, "indo" for Indonesian odds
 #' @param Vectorized2wayOutput1stElement This speeds up the calculation as the output is a a vector that contains the FV of the first input. Usefull in dplyr chains.
 #'
 #'@export
@@ -22,18 +22,18 @@
 #' odds.fv(df$Home,df$Away,input="dec",output="prob")
 #' odds.fv(df$Home,df$Away,input="dec",output="prob",Vectorized2wayOutput1stElement = TRUE)
 odds.fv <- function (...,input="us",output="us",Vectorized2wayOutput1stElement = FALSE) {
-  
+
   if ( !is.element(input,c("us","prob","dec","malay","hk","indo")) ||
        !is.element(output,c("us","prob","dec","malay","hk","indo"))){
     stop("Valid Oddsformats are us,prob,dec,malay,hk,indo")}
-  
-  
+
+
   odds <- data.frame(...)
-  
+
   if(ncol(odds)==1){
     odds <- t(odds)
   }
-  
+
   if(input=="dec"){
     vig.prob.odds <-  mapply(odds.dec2prob, odds )
   }
@@ -50,20 +50,20 @@ odds.fv <- function (...,input="us",output="us",Vectorized2wayOutput1stElement =
     vig.prob.odds <-  mapply(odds.us2prob, odds )
   }
   if (input=="prob"){
-    vig.prob.odds <-  odds 
+    vig.prob.odds <-  as.matrix(odds) 
   }
   if(inherits(vig.prob.odds,"matrix")){
     vig <- rowSums(vig.prob.odds)
     vig[vig < 1] <- NA
   }else{
-    vig <- sum(vig.prob.odds) 
+    vig <- sum(vig.prob.odds)
     if(is.na(vig) | vig < 1 ){
       return(NA)
     }
   }
-  
+
   fair.prob.odds <- vig.prob.odds/vig
-  
+
   if (output=="dec"){
     fair.prob.dec <- odds.prob2dec(fair.prob.odds)
     if(Vectorized2wayOutput1stElement){
@@ -80,7 +80,7 @@ odds.fv <- function (...,input="us",output="us",Vectorized2wayOutput1stElement =
       return(fair.prob.indo)
     }
   }
-  
+
   if (output=="hk"){
     fair.prob.hk <- odds.prob2hk(fair.prob.odds)
     if(Vectorized2wayOutput1stElement){
@@ -89,7 +89,7 @@ odds.fv <- function (...,input="us",output="us",Vectorized2wayOutput1stElement =
       return(fair.prob.hk)
     }
   }
-  
+
   if (output=="prob"){
     if(Vectorized2wayOutput1stElement){
       return(fair.prob.odds[,1])
@@ -98,7 +98,7 @@ odds.fv <- function (...,input="us",output="us",Vectorized2wayOutput1stElement =
     }
   }
   if (output=="us"){
-    fair.prob.us <- odds.prob2us(fair.prob.odds) 
+    fair.prob.us <- odds.prob2us(fair.prob.odds)
     if(Vectorized2wayOutput1stElement){
       return(fair.prob.us[,1])
     } else {
@@ -113,5 +113,5 @@ odds.fv <- function (...,input="us",output="us",Vectorized2wayOutput1stElement =
       return(fair.prob.malay)
     }
   }
-  
+
 }
