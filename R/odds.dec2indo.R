@@ -9,7 +9,8 @@
 #' @examples
 #' odds.dec2indo(c(1.93,2.05))
 odds.dec2indo <- function (x) {
-  indo <- rep(NA_real_, length(x))
+  indo <- x
+  indo[] <- NA_real_
   indo[which(x > 1)] <- odds.dec2us(x[which(x > 1)]) / 100
   indo
 }
