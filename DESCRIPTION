@@ -1,7 +1,7 @@
 Package: odds.converter
 Type: Package
 Title: Betting Odds Conversion
-Version: 1.47
+Version: 1.48
 Date: 2018-05-01
 Author: Marco Blume, Sascha Thomsen
 Maintainer: Marco Blume <marco.blume@pinnaclesports.com>
