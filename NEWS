@@ -1,25 +1,32 @@
-odds.converter v1.48 (Release date: 2018-05-28)
+odds.converter v1.4.9 (Release date: 2018-07-09)
+==============
+
+Changes:
+
+* Added odds.vig
+
+odds.converter v1.4.8 (Release date: 2018-05-28)
 ==============
 
 Changes:
 
 * Refactored odds.fv and added odds.vig to calculate the overround directly. Thanks to bkmontgom for the pull request!
 
-odds.converter v1.47 (Release date: 2018-05-01)
+odds.converter v1.4.7 (Release date: 2018-05-01)
 ==============
 
 Changes:
 
 * Replaced ifelse to speed up the code execution. Thanks to bkmontgom for the pull request!
 
-odds.converter v1.46 (Release date: 2017-6-23)
+odds.converter v1.4.6 (Release date: 2017-6-23)
 ==============
 
 Changes:
 
 * Reintroduced Vectorized2wayOutput1stElement to odds.fv()
 
-odds.converter v1.45 (Release date: 2017-6-23)
+odds.converter v1.4.5 (Release date: 2017-6-23)
 ==============
 
 Changes:
